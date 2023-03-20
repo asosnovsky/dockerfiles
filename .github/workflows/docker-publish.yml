@@ -8,12 +8,12 @@ name: Docker
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
+    tags: ["v*.*.*"]
 
 env:
-  REGISTRY: ghcr.io
+  REGISTRY: ghcr.io/asosnovsky
 jobs:
   build:
     strategy:
@@ -32,7 +32,7 @@ jobs:
       - name: Install cosign
         uses: sigstore/cosign-installer@f3c664df7af409cb4873aa5068053ba9d61a57b6 #v2.6.0
         with:
-          cosign-release: 'v1.13.1'
+          cosign-release: "v1.13.1"
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@79abd3f86f79a9d68a23c75a09a9a85889262adf
       - name: Log into registry ${{ env.REGISTRY }}
