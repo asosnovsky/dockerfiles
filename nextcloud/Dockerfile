@@ -11,4 +11,4 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pecl install smbclient && \
-    echo 'extension=smbclient.so' >> /usr/src/nextcloud/3rdparty/aws/aws-crt-php/php.ini
+    docker-php-ext-enable smbclient
