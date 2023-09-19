@@ -1,4 +1,4 @@
-FROM nextcloud:27.0.2-fpm
+FROM nextcloud:27.1.0-fpm
 
 RUN apt-get update && \
     apt-get install -y \
