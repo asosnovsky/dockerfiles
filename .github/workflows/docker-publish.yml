@@ -30,7 +30,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install cosign
-        uses: sigstore/cosign-installer@0f983226cbf1ee0368469d3e2b33417ceec4c225 # v3.0.2
+        uses: sigstore/cosign-installer@e1523de7571e31dbe865fd2e80c5c7c23ae71eb4 # v3.4.0
         with:
           cosign-release: "v1.13.1"
       - name: Setup Docker buildx
