@@ -18,7 +18,9 @@ jobs:
   build:
     strategy:
       matrix:
-        project: ["nextcloud"]
+        project:
+          - "nextcloud"
+          - "dnsmasq"
 
     runs-on: ubuntu-latest
     permissions:
